@@ -23,10 +23,10 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
+		<!-- dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+		</dependency-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -56,9 +56,16 @@
 			<version>2.6.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+	 	<finalName>${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -70,7 +77,7 @@
 				<artifactId>azure-webapp-maven-plugin</artifactId>
 				<version>1.1.0</version>
 				<configuration>
-<!-- 					<deploymentType>jar</deploymentType> -->
+					<!-- <deploymentType>jar</deploymentType> -->
 
 					<!-- configure app to run on port 80, required by App Service -->
 					<appSettings>

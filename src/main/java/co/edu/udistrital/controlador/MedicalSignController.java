@@ -1,5 +1,8 @@
 package co.edu.udistrital.controlador;
 
+import java.util.Collection;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,5 +19,10 @@ public class MedicalSignController {
 		final String mensajeRetorno = "Recieved signal: "+senalMedica.getDato();
 		return mensajeRetorno;
 	}
+	
+	@GetMapping("/hello")
+    public Collection<String> sayHello() {
+        return null;
+    }
 	
 }
