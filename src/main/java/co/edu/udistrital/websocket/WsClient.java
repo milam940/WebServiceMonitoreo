@@ -1,9 +1,11 @@
 package co.edu.udistrital.websocket;
 
+import java.io.IOException;
 import java.net.URI;
 
 import javax.websocket.ClientEndpoint;
 import javax.websocket.ContainerProvider;
+import javax.websocket.OnClose;
 import javax.websocket.Session;
 import javax.websocket.WebSocketContainer;
 
@@ -36,6 +38,18 @@ public class WsClient {
 //				}
 //			}
 		}
+	}
+	
+	@OnClose
+	public void cerrarSesion(){
+		if(session.isOpen()){
+			try {
+				session.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		session=null;
 	}
 
 }
