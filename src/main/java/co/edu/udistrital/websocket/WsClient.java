@@ -24,7 +24,7 @@ public class WsClient {
 			if (container == null || session == null) {
 				container = ContainerProvider.getWebSocketContainer();
 				session = container.connectToServer(WsClient.class,
-						URI.create("ws://localhost:8081/WebSocketServer/endpoint"));
+						URI.create("ws://52.167.48.18:8080/WebSocketServer/endpoint"));
 			}
 			session.getAsyncRemote().sendText(mensaje);
 		} catch (Exception e) {

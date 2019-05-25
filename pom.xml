@@ -104,7 +104,7 @@
 					<!-- Web App information -->
 					<resourceGroup>webservices</resourceGroup>
 					<appName>ws-medical-device</appName>
-					<region>westus2</region>
+					<region>eastus2</region>
 
 					<!-- Java Runtime Stack for Web App on Linux -->
 					<linuxRuntime>tomcat 8.5-jre8</linuxRuntime>
