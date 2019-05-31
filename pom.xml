@@ -17,15 +17,10 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<!-- <azure.containerRegistry>registroContenedorWs</azure.containerRegistry> -->
-		<!-- <docker.image.prefix>${azure.containerRegistry}.azurecr.io</docker.image.prefix> -->
 		<java.version>1.8</java.version>
-		<!-- <maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format> -->
 	</properties>
 
 	<dependencies>
-		<!-- dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter</artifactId> 
-			</dependency -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
