@@ -1,14 +1,11 @@
 package co.edu.udistrital.websocket;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.websocket.ClientEndpoint;
 
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
-import org.springframework.messaging.simp.stomp.StompFrameHandler;
-import org.springframework.messaging.simp.stomp.StompHeaders;
 import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandler;
 import org.springframework.web.socket.client.WebSocketClient;
@@ -46,7 +43,7 @@ public class WsClient {
 				WebSocketStompClient stompClient = new WebSocketStompClient(sockJsClient);
 				stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 				//String url = "ws://localhost:9001/medical-devices-websocket"; //http://localhost:9001/medical-devices-websocket
-				String url = "ws://websocketspring.azurewebsites.net/medical-devices-websocket";
+				String url = "ws://web-socket-medical.azurewebsites.net/medical-devices-websocket";
 				StompSessionHandler sessionHandler = new SessionHandler();
 				sesion = stompClient.connect(url, sessionHandler).get();
 				sesion.subscribe("/topic/medicalSignal", sessionHandler);

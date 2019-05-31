@@ -21,8 +21,8 @@ public class SessionHandler implements StompSessionHandler {
 
 	@Override
 	public void handleFrame(StompHeaders headers, Object payload) {
-		// Message msg = (Message) payload;
-//		System.out.println("Recibido: ");
+//		 Message msg = (Message) payload;
+		System.out.println("Recibido: "+payload);
 	}
 
 	@Override
