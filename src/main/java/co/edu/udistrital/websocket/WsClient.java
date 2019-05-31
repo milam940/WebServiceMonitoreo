@@ -43,7 +43,7 @@ public class WsClient {
 				WebSocketStompClient stompClient = new WebSocketStompClient(sockJsClient);
 				stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 				//String url = "ws://localhost:9001/medical-devices-websocket"; //http://localhost:9001/medical-devices-websocket
-				String url = "ws://web-socket-medical.azurewebsites.net/medical-devices-websocket";
+				String url = "wss://websocket-medical.azurewebsites.net/medical-devices-websocket";
 				StompSessionHandler sessionHandler = new SessionHandler();
 				sesion = stompClient.connect(url, sessionHandler).get();
 				sesion.subscribe("/topic/medicalSignal", sessionHandler);
